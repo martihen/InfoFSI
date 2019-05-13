@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fbfeff;" height="100%">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000C4D;" height="100%">
   <a class="navbar-brand" href="#">Pool Energy</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -9,19 +9,21 @@
       <li class="nav-item" routerLinkActive="active">
         <a  class="nav-link" [routerLink]="['/inicio']">Quienes Somos</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown" routerLinkActive="active">
         <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
           Servicios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Estrategia</a>
-          <a class="dropdown-item" href="#">Regulacíon</a>
+          <a class="dropdown-item" href="/servicios">Servicios</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/estrategia">Estrategia</a>
+          <a class="dropdown-item" href="/regulacion">Regulacíon</a>
           <a class="dropdown-item" href="#">Comercializacón</a>
           <a class="dropdown-item" href="#">Estudios y data intelligence</a>
         </div>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/servicios']">Estudios</a>
+        <a class="nav-link" [routerLink]="['/#']">Estudios</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/#']">Nuestra opinión</a>
