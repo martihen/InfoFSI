@@ -14,16 +14,16 @@
           Servicios
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/servicios">Servicios</a>
+          <a class="dropdown-item" routerLinkActive="active" href="/servicios">Servicios</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="/estrategia">Estrategia</a>
           <a class="dropdown-item" href="/regulacion">Regulacíon</a>
-          <a class="dropdown-item" href="#">Comercializacón</a>
-          <a class="dropdown-item" href="#">Estudios y data intelligence</a>
+          <a class="dropdown-item" href="/comercializacion">Comercializacón</a>
+          <a class="dropdown-item" href="/data_intelligence">Estudios y data intelligence</a>
         </div>
       </li>
       <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/#']">Estudios</a>
+        <a class="nav-link" [routerLink]="['/estudios']">Estudios</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['/#']">Nuestra opinión</a>

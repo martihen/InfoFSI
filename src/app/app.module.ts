@@ -8,9 +8,11 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { EstrategiaComponent } from './estrategia/estrategia.component';
 import { RegulacionComponent } from './regulacion/regulacion.component';
+import { ComercializacionComponent } from './comercializacion/comercializacion.component';
+import { EstudiosComponent } from './estudios/estudios.component';
+import { DataIntelligenceComponent } from './data-intelligence/data-intelligence.component';
 
 import { Routes, RouterModule } from '@angular/router';
-import { ComercializacionComponent } from './comercializacion/comercializacion.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo:'/inicio', pathMatch: 'full' },
@@ -18,6 +20,9 @@ const appRoutes: Routes = [
   { path: 'servicios', component: ServiciosComponent },
   { path: 'estrategia', component: EstrategiaComponent },
   { path: 'regulacion', component: RegulacionComponent },
+  { path: 'comercializacion', component: ComercializacionComponent },
+  { path: 'data_intelligence', component: DataIntelligenceComponent },
+  { path: 'estudios', component: EstudiosComponent },
   { path: 'contacto', component: ContactoComponent }
 ];
 
@@ -30,7 +35,9 @@ const appRoutes: Routes = [
     ContactoComponent,
     EstrategiaComponent,
     RegulacionComponent,
-    ComercializacionComponent
+    ComercializacionComponent,
+    EstudiosComponent,
+    DataIntelligenceComponent
   ],
   imports: [
     BrowserModule,
