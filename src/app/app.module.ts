@@ -16,7 +16,6 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo:'/inicio', pathMatch: 'full' },
   { path: 'inicio', component: QuienesSomosComponent },
   { path: 'servicios', component: ServiciosComponent },
   { path: 'estrategia', component: EstrategiaComponent },
@@ -25,7 +24,8 @@ const appRoutes: Routes = [
   { path: 'data_intelligence', component: DataIntelligenceComponent },
   { path: 'estudios', component: EstudiosComponent },
   { path: 'nuestra-opinion', component: NuestraOpinionComponent },
-  { path: 'contacto', component: ContactoComponent }
+  { path: 'contacto', component: ContactoComponent },
+  { path: '**', redirectTo:'inicio', pathMatch: 'full' }
 ];
 
 @NgModule({
