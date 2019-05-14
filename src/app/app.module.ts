@@ -25,6 +25,7 @@ const appRoutes: Routes = [
   { path: 'estudios', component: EstudiosComponent },
   { path: 'nuestra-opinion', component: NuestraOpinionComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: '', redirectTo:'inicio', pathMatch: 'full' },
   { path: '**', redirectTo:'inicio', pathMatch: 'full' }
 ];
 
