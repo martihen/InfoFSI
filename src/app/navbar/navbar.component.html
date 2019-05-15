@@ -1,38 +1,36 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: #000C4D;" height="100%">
-  <a class="navbar-brand" [routerLink]="['/inicio']"><img src="\assets\img\iconoPoolEnergy1.png" alt="Imagen" width="30" height="30" class="d-inline-block align-top">
-    Pool Energy
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark" style="background-color: #607D8B;" height="100%">
+  <a class="navbar-brand" [routerLink]="['/inicio']"><img src="\assets\img\Logo_Pool_Energy.png" alt="Imagen" width="200" height="40" class="d-inline-block align-top">
+    
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLinkActive="active">
-        <a  class="nav-link" [routerLink]="['/inicio']">Quienes Somos</a>
-      </li>
-      <li class="nav-item dropdown" routerLinkActive="active">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-          Servicios
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/servicios']">Servicios</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/estrategia']">Estrategia</a>
-          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/regulacion']">Regulación</a>
-          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/comercializacion']">Comercialización</a>
-          <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/data_intelligence']">Estudios y data intelligence</a>
-        </div>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/estudios']">Estudios</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/nuestra-opinion']">Nuestra opinión</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
-      </li>
-    </ul>
+  <div class="d-md-flex d-block flex-row mx-md-auto mx-10">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li  routerLinkActive="active">
+          <a  class="nav-link" [routerLink]="['/inicio']">Quienes Somos</a>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/servicios']">
+            Servicios</a>        
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/estrategia']">Estrategia</a>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/regulacion']">Regulación</a>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/comercializacion']">Comercialización</a>
+            <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/data_intelligence']">Estudios y data intelligence</a>
+          </div>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/estudios']">Estudios</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/nuestra-opinion']">Nuestra opinión</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
