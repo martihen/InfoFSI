@@ -12,8 +12,10 @@ import { EstudiosComponent } from './estudios/estudios.component';
 import { DataIntelligenceComponent } from './data-intelligence/data-intelligence.component';
 import { NuestraOpinionComponent } from './nuestra-opinion/nuestra-opinion.component';
 import { ContactoComponent } from './contacto/contacto.component';
-
+import { BarComponent } from './bar/bar.component';
 import { Routes, RouterModule } from '@angular/router';
+import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+
 
 const appRoutes: Routes = [
   { path: 'inicio', component: QuienesSomosComponent },
@@ -41,7 +43,9 @@ const appRoutes: Routes = [
     ComercializacionComponent,
     EstudiosComponent,
     DataIntelligenceComponent,
-    NuestraOpinionComponent
+    NuestraOpinionComponent,
+    BarComponent,
+    PiePaginaComponent
   ],
   imports: [
     BrowserModule,
