@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['/inicio']"><img src="\assets\img\Logo_Pool_Energy.png" alt="Imagen" width="200" height="40" class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!--<div class="d-md-flex d-block flex-row mx-md-auto mx-10">-->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li  routerLinkActive="active">
+            <a  class="nav-link" [routerLink]="['/inicio']">Quienes Somos</a>
+          </li>
+          <li class="nav-item dropdown" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/servicios']">
+              Servicios</a>        
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/estrategia']">Estrategia</a>
+              <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/regulacion']">Regulación</a>
+              <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/comercializacion']">Comercialización</a>
+              <a class="dropdown-item" routerLinkActive="active" [routerLink]="['/data_intelligence']">Estudios y data intelligence</a>
+            </div>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/estudios']">Estudios</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/nuestra-opinion']">Nuestra opinión</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/contacto']">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    <!--</div>-->
+</nav>
