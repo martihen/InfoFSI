@@ -1,10 +1,7 @@
-.div1 {
-    background-image: url(/assets/img/Logo_Pool_Energy.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    
-}
-
 .jumbotron {
     background-color: #ffffff;
+}
+
+.inicio{
+    background: url(/assets/img/2986.jpg) center no-repeat #fff;
 }

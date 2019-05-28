@@ -1,1 +1,169 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'icomoon';
+    src: url("/assets/fonts/icomoon/icomoon.eot?srf3rx");
+    src: url("/assets/fonts/icomoon/icomoon.eot?srf3rx#iefix") format("embedded-opentype"), 
+        url("/assets/fonts/icomoon/icomoon.ttf?srf3rx") format("truetype"), 
+        url("/assets/fonts/icomoon/icomoon.woff?srf3rx") format("woff"), 
+        url("/assets/fonts/icomoon/icomoon.svg?srf3rx#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+.cover {
+    height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.slogan {
+    margin-top: 400px;
+    color: #ffffff;
+    font-size-adjust: inherit;
+}
+.cover a {
+    color: #7ED321;
+}
+.cover a:hover {
+    color: white;
+}
+.cover .overlay {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(68, 66, 66, 0.288);
+  }
+
+.cover > .container {
+    position: relative;
+    z-index: 10;
+  }
+@media screen and (max-width: 768px) {
+    .cover {
+      height: 600px;
+    }
+    .slogan {
+        margin-top: 85px;
+        color: #ffffff;
+        font-size-adjust: inherit;
+    }
+  }
+.cover .display-t,
+.cover .display-tc {
+  height: 900px;
+  display: table;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .cover .display-t,
+    .cover .display-tc {
+      height: 600px;
+    }
+}
+.cover.cover-sm {
+    height: 600px;
+}
+
+@media screen and (max-width: 768px) {
+    .cover.cover-sm {
+      height: 400px;
+    }
+}
+.cover.cover-sm .display-t,
+.cover.cover-sm .display-tc {
+  height: 600px;
+  display: table;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cover.cover-sm .display-t,
+  .cover.cover-sm .display-tc {
+    height: 400px;
+  }
+}
+.cover.cover-xs {
+  height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .cover.cover-xs {
+    height: inherit !important;
+    padding: 3em 0;
+  }
+}
+.cover.cover-xs .display-t,
+.cover.cover-xs .display-tc {
+  height: 500px;
+  display: table;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cover.cover-xs .display-t,
+  .cover.cover-xs .display-tc {
+    padding: 3em 0;
+    height: inherit !important;
+  }
+}
+.cover.cover-xxs {
+  padding: 3em 0;
+}
+.cover .btn-primary {
+  color: #fff !important;
+}
+
+#inicio,
+#gtco-practice-areas,
+#gtco-our-team,
+#gtco-contact {
+  padding: 9em 0;
+  clear: both;
+}
+
+.row-pb-md {
+    padding-bottom: 4em !important;
+}
+
+.js .animate-box {
+    opacity: 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .heading h1 {
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 768px) {
+    .heading h1 {
+      font-size: 26px;
+    }
+  }
+  .heading .sub {
+    position: relative;
+    padding-bottom: 40px;
+    font-size: 18px;
+    color: #757575;
+  }
+  .heading .sub:after {
+    bottom: 0;
+    left: 50%;
+    margin-left: -36px;
+    content: "";
+    position: absolute;
+    width: 72px;
+    height: 2px;
+    background: #118DF0;
+  }
+  
+  .heading-colored {
+    color: #118DF0;
+  }
+/*PIE DE PAGINA*/
+  #gtco-footer {
+    padding-top: 30px;
+    background:#118DF0;
+  }
