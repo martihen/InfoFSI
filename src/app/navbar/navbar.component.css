@@ -7,12 +7,22 @@
     -o-transition: 0.3s;
     transition: 0.3s;
 }
+.navbar.navbar-expand-lg.sticky-top.navbar-light {
+    padding-left: 20%;
+    padding-right: 20%;
+}
 @media screen and (max-width: 768px) {
+    .navbar.navbar-expand-lg.sticky-top.navbar-light {
+        padding: 10px;
+    }
     .navbar {
-        padding: 20px;
+        background: #fff;
     }
     .navbar-collapse.collapse.show{
         background: #fff;
+    }
+    .navbar li {
+        text-align: center !important;
     }
 }
 .navbar {

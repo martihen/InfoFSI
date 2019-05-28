@@ -23,6 +23,8 @@
 		}
 	};
 
+
+
 	var header = function() {
 		$(window).scroll(function(){
 			console.log("scroll");

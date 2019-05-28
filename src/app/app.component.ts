@@ -15,6 +15,7 @@ export class AppComponent {
   ) {}
 
   onActivate(event: any) {
+    console.log("alessandro "+window.scrollTo);
     if (isPlatformBrowser(this.platformId)) {
       let scrollToTop = window.setInterval(() => {
         let pos = window.pageYOffset;
