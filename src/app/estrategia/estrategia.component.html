@@ -1,21 +1,64 @@
-<div class="jumbotron">
-  <h1 class="display-5 text-center font-weight-bold">Estretegia</h1>
-  <div class="container">
-      <p class="text-justify lead" style="font-size:30px;"><p class="text-justify lead" style="font-size:30px;">Pool Energy Consultores cuenta con las herramientas necesarias para diseñar herramientas competitivas tanto para la demanda como para la oferta, orientadas a la consecución de resultados favorables y en la línea con los objetivos y valores de cada uno de nuestros clientes.</p>
-      <h1 class="display-5 text-left font-weight-bold">Servicios</h1>
-      <ul>
-        <li class="lead" style="font-size:25px;">Habilitación comercial y posicionamiento en el mercado para nuevos agentes</li>
-        <li class="lead" style="font-size:25px;">Apoyo en la busqueda de potenciales proyectos de generación y comercialización</li>
-        <li class="lead" style="font-size:25px;">Auditoria de proyectos (due diligence)</li>
-        <li class="lead" style="font-size:25px;">Formulación y evaluación comercial de proyectos</li>
-        <li class="lead" style="font-size:25px;">Diseño de estrategia comercial de los productos del Mercado Mayorista de Electricidad (MM) y Mercado Eléctrico Regional (MER)
+  <div class="cover">
+    <div id="servicios">
+      <div class="container">
+        <div class="heading animate-box" data-animate-effect="fadeIn">
+          <h1 class="text-center font-weight-bold">Estretegia</h1>
+          <p class="text-justify lead">Pool Energy Consultores cuenta con las herramientas necesarias para diseñar herramientas competitivas tanto para la demanda como para la oferta, orientadas a la consecución de resultados favorables y en la línea con los objetivos y valores de cada uno de nuestros clientes.</p>
+        </div>
+        <div class="animate-box" data-animate-effect="fadeout">
+          <h1 class="text-left font-weight-bold">Servicios</h1>
           <ul>
-              <li class="lead" style="font-size:25px;">Potencia</li>
-              <li class="lead" style="font-size:25px;">Energía</li>
-              <li class="lead" style="font-size:25px;">Derechos de Transmisión</li>
-              <li class="lead" style="font-size:25px;">Servicios complementarios</li>
+            <li class="lead">Habilitación comercial y posicionamiento en el mercado para nuevos agentes</li>
+            <li class="lead">Apoyo en la busqueda de potenciales proyectos de generación y comercialización</li>
+            <li class="lead">Auditoria de proyectos (due diligence)</li>
+            <li class="lead">Formulación y evaluación comercial de proyectos</li>
+            <li class="lead">Diseño de estrategia comercial de los productos del Mercado Mayorista de Electricidad (MM) y Mercado Eléctrico Regional (MER)
+              <ul>
+                  <li class="lead">Potencia</li>
+                  <li class="lead">Energía</li>
+                  <li class="lead">Derechos de Transmisión</li>
+                  <li class="lead">Servicios complementarios</li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
+      </div>
+      <div class="row animate-box">
+        <div class="col-sm-6" data-animate-effect="fadeInLeft">
+            <div class="card">
+                <a [routerLink]="['/regulacion']" class="btn btn-fix">
+                <img src="\assets\img\regulacion.jpg" alt="Imagen">
+              <div class="card-img-overlay">
+                <h1 class="card-title">Regulación</h1>
+              </div>  
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-6" data-animate-effect="fadeIn">
+              <div class="card">
+                  <a [routerLink]="['/estrategia']" class="btn btn-fix">
+                  <img src="\assets\img\comercializacion.jpg" alt="Imagen" >
+                <div class="card-img-overlay">
+                  <h1 class="card-title">Comercialización</h1>
+                </div>  
+                </a>
+              </div>
+          </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+      <div class="col-sm-6" data-animate-effect="fadeInLeft">
+          <div class="card">
+              <a [routerLink]="['/regulacion']" class="btn btn-fix">
+              <img src="\assets\img\data_intelligence.jpg" alt="Imagen">
+            <div class="card-img-overlay">
+              <h1 class="card-title">Estudios y</h1>
+              <h1 class="card-title">Data intelligence</h1>
+            </div>  
+            </a>
+          </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
   </div>
 </div>
+<app-pie-pagina></app-pie-pagina>

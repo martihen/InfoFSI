@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  margin: 0;
+}
 @font-face {
     font-family: 'icomoon';
     src: url("/assets/fonts/icomoon/icomoon.eot?srf3rx");
@@ -58,10 +65,18 @@
   display: table;
   width: 100%;
 }
+.display-t1{
+  height: 900px;
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
     .cover .display-t,
     .cover .display-tc {
       height: 600px;
+    }
+    .display-t1{
+      height: 600px;
+      width: 100%;
     }
 }
 .cover.cover-sm {
@@ -115,17 +130,21 @@
 }
 
 #inicio,
-#gtco-practice-areas,
-#gtco-our-team,
 #gtco-contact {
   padding: 9em 0;
   clear: both;
 }
 
-.row-pb-md {
-    padding-bottom: 4em !important;
+#servicios {
+  padding: 5em 0;
+  clear: both;
 }
 
+
+/*.row-pb-md {
+    padding-bottom: 4em !important;
+}
+*/
 .js .animate-box {
     opacity: 0;
 }
@@ -162,8 +181,52 @@
   .heading-colored {
     color: #118DF0;
   }
-/*PIE DE PAGINA*/
-  #gtco-footer {
-    padding-top: 30px;
-    background:#118DF0;
+
+/*Cards*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+.card img{
+  width: 100%;
+  height: 400px;
+}
+.card:hover {
+  box-shadow: 0 10px 19px 0 rgba(0,0,0,0.2);
+}
+.card.btn-fix {
+  padding: 0;
+  border: none;
+  white-space: normal;
+  text-align: left;
+}
+.card-title{
+  color: black;
+  text-align: center;
+}
+.col-sm.card-title{
+  font-size: 100%;
+}
+@media screen and (max-width: 768px) {
+  .card-title{
+    color: black;
+    text-align: center;
+    font-size: 25px;
   }
+}
+
+/*PIE DE PAGINA*/
+/*
+footer {
+  background-color: black;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+}*/
+footer {
+  padding-top: 30px;
+  background: #fafafa;
+}
