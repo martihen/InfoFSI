@@ -226,7 +226,7 @@ body {
 
 .card img {
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 
 .card a:hover {

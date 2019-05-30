@@ -34,13 +34,8 @@
         background-color: #555;
         color: white;
     } */
-    .nav-link {
-        height: 20px;
-        padding: 0;
-        margin: 0;
-    }
-    .dropdown-menu.dropdown-item {
-        height: 20px;
+    .dropdown-menu {
+        top: 0;
         overflow: auto;
         padding: 0;
     }
@@ -86,7 +81,7 @@
 
 .navbar ul li a {
     font-size: 14px;
-    padding: 30px 10px;
+    padding: 20px 10px;
     text-transform: uppercase;
     color: #002060;
     font-weight: 400 !important;
@@ -115,7 +110,7 @@
 }
 
 .navbar ul li.has-dropdown .dropdown {
-    width: 130px;
+    width: 13px;
     -webkit-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
@@ -153,7 +148,7 @@
 
 .navbar ul li.has-dropdown .dropdown li {
     display: block;
-    margin-bottom: 7px;
+    margin-bottom: 0px;
 }
 
 .navbar ul li.has-dropdown .dropdown li:last-child {
@@ -183,12 +178,13 @@
 }
 
 .navbar ul li.btn-cta a {
-    color: black;
+    color: #002060;
+    ;
 }
 
 .navbar ul li.btn-cta a span {
     border: none !important;
-    background: black;
+    background: rgba(255, 255, 255, 0.2);
     padding: 4px 20px;
     display: -moz-inline-stack;
     display: inline-block;
@@ -204,8 +200,8 @@
 }
 
 .navbar ul li.btn-cta a:hover span {
-    background: #8bde2f;
-    color: #002060;
+    background: #118DF0;
+    color: #fff;
 }
 
 .navbar ul li.active>a {
@@ -248,7 +244,7 @@
 
 .navbar.scrolled ul li.btn-cta a span {
     border: none !important;
-    background: #7ED321;
+    background: #118DF0;
     padding: 4px 20px;
     color: black;
 }
@@ -264,6 +260,7 @@
 
 ul li.nav-item.dropdown:hover>.dropdown-menu {
     display: inline-block;
+    margin-top: -5px;
 }
 
 ul li.nav-item.dropdown>.dropdown-toggle:active {
