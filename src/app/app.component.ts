@@ -1,5 +1,5 @@
 import { Component, Inject, PLATFORM_ID, APP_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, getLocaleDateFormat } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,6 @@ export class AppComponent {
   ) {}
 
   onActivate(event: any) {
-    console.log("alessandro "+window.scrollTo);
     if (isPlatformBrowser(this.platformId)) {
       let scrollToTop = window.setInterval(() => {
         let pos = window.pageYOffset;
