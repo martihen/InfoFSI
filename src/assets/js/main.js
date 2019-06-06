@@ -116,10 +116,16 @@
         setTimeout(function() {
             $(".loader").fadeOut("slow");
             // console.log("Fin loading..." + Date());
-        }, 5000);
+        }, 500);
     };
 
+    // //VIDEO
+    // var video = function() {
+    //     console.log("hola");
+    //     //$('video').prop('muted', true).play();
+    // };
     $(function() {
+        //video();
         loaderPage();
         // console.log("inicio");
         header();
