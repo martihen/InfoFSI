@@ -15,7 +15,15 @@ video {
     background-size: cover;
 }
 
-iframe #player {
+@media screen and (max-width: 768px) {
+    video {
+        padding-top: 50px;
+        height: 0px;
+    }
+}
+
+
+/* iframe #player {
     min-width: 100%;
     min-height: 100%;
     width: auto;
@@ -26,4 +34,4 @@ iframe #player {
     transform: translateX(-50%) translateY(-50%);
     z-index: -100;
     background-size: cover;
-}
+} */

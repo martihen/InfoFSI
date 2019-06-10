@@ -10,8 +10,7 @@ export class QuienesSomosComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    // var video = document.getElementsByTagName(video);
-    // video.play();
+    
   }
 
 }
