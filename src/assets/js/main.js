@@ -113,24 +113,25 @@
     // Loading page
     var loaderPage = function() {
         // console.log("loading..." + Date());
-        setTimeout(function() {
-            $(".loader").fadeOut("slow");
-            // console.log("Fin loading..." + Date());
-        }, 500);
+        //setTimeout(function() {
+        $(".loader").fadeOut("slow");
+        // console.log("Fin loading..." + Date());
+        //}, 500);
     };
 
-    // //VIDEO
-    // var video = function() {
-    //     console.log("hola");
-    //     //$('video').prop('muted', true).play();
-    // };
+    //VIDEO
+    var video = function() {
+        console.log("hola" + $('video'));
+        // $('video'); //.play();
+        document.getElementById('video').play();
+    };
     $(function() {
-        //video();
-        loaderPage();
+        video();
         // console.log("inicio");
         header();
         navigationSection();
         contentWayPoint();
+        loaderPage();
     });
 
 
