@@ -27,7 +27,6 @@
 
     var header = function() {
         $(window).scroll(function() {
-            //console.log("scroll");
             var st = $(window).scrollTop();
             if (st > 50) {
                 $('.navbar').addClass('scrolled');
@@ -50,9 +49,7 @@
     };
 
     var navigationSection = function() {
-        // console.log("navigationSection");
         var $section = $('section[data-section]');
-        // console.log("navigationSection ->$section");
         $section.waypoint(function(direction) {
 
             if (direction === 'down') {
@@ -75,9 +72,7 @@
     //Animacion
     var contentWayPoint = function() {
         var i = 0;
-        // console.log("contentWayPoint");
         $('.animate-box').waypoint(function(direction) {
-            // console.log("contentWayPoint ->animate-box");
             if (direction === 'down' && !$(this.element).hasClass('animated-fast')) {
 
                 i++;
@@ -121,13 +116,12 @@
 
     //VIDEO
     var video = function() {
-        console.log("hola" + $('video'));
-        // $('video'); //.play();
-        document.getElementById('video').play();
+        if (document.getElementById('video') != undefined) {
+            document.getElementById('video').play();
+        }
     };
     $(function() {
         video();
-        // console.log("inicio");
         header();
         navigationSection();
         contentWayPoint();
