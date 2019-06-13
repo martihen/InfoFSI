@@ -1,0 +1,19 @@
+img {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -100;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    img {
+        padding-top: 30px;
+        height: 0px;
+    }
+}
