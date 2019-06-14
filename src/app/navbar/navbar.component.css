@@ -187,7 +187,6 @@
     background: rgba(255, 255, 255, 0.2);
     padding: 4px 20px;
     display: -moz-inline-stack;
-    display: inline-block;
     zoom: 1;
     *display: inline;
     -webkit-transition: 0.3s;
