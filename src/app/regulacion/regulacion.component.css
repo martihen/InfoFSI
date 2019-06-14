@@ -1,7 +1,34 @@
-.jumbotron {
-    background-color: #ffffff;
+.text-left {
+    color: #000C4D;
+    ;
 }
 
-.text-left {
-    color: #000C4D;;
+#img {
+    margin-top: -60px;
+    /* opacity: 0.5;
+    filter: alpha(opacity=50); */
+    background: url(/assets/img/Regulación.jpg) center no-repeat;
+    background-size: contain;
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    right: 130px;
+    /* border: 3px solid #73AD21; */
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #img {
+        margin-top: -60px;
+        /* opacity: 0.5;
+    filter: alpha(opacity=50); */
+        background: url(/assets/img/Regulación.jpg) center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        right: 0px;
+        /* border: 3px solid #73AD21; */
+        padding: 10px;
+    }
 }
