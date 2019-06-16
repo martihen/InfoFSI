@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+//Correo
+import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
@@ -16,6 +19,8 @@ import { BarComponent } from './bar/bar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 
+//Correo
+import { CorreoService } from './services/correo.service'
 
 const appRoutes: Routes = [
   { path: 'inicio', component: QuienesSomosComponent },
@@ -49,10 +54,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [CorreoService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor() {}
+}
 

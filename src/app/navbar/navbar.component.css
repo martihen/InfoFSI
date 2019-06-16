@@ -248,6 +248,15 @@
     color: black;
 }
 
+@media screen and (max-width: 768px) {
+    .navbar ul li.btn-cta a span {
+        border: none !important;
+        background: #118DF0;
+        padding: 4px 20px;
+        color: black;
+    }
+}
+
 .navbar.scrolled #gtco-logo em,
 .navbar.scrolled #gtco-logo a {
     color: #000;
