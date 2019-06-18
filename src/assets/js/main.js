@@ -39,7 +39,6 @@
 
     // Reflect scrolling in navigation
     var navActive = function(section) {
-
         var $el = $('.main-nav > ul');
         $el.find('li').removeClass('active');
         $el.each(function() {
@@ -117,10 +116,15 @@
     //VIDEO
     var video = function() {
         if (document.getElementById('video') != undefined) {
-            document.getElementById('video').play();
+            try {
+                document.getElementById('video').play();
+            } catch (error) {
+                console.log(error);
+            }
         }
     };
     $(function() {
+        console.log("inicio");
         video();
         header();
         navigationSection();
