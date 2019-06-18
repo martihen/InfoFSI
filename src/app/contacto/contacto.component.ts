@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CorreoService } from '../services/correo.service';
 import swal from 'sweetalert2'
+import { Form } from '@angular/forms';
 
 @Component({
   selector: 'app-contacto',
@@ -15,7 +16,7 @@ export class ContactoComponent implements OnInit {
   ngOnInit() {
   }
 
-  contactForm(form) {
+  contactForm(form: Form) {
     console.log("contact form");
     this._correoService.sendMessage(form).subscribe(() => {
     swal.fire({

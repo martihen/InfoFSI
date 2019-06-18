@@ -124,12 +124,13 @@
         }
     };
     $(function() {
-        console.log("inicio");
-        video();
-        header();
-        navigationSection();
-        contentWayPoint();
-        loaderPage();
+        window.onload = function() {
+            video();
+            header();
+            navigationSection();
+            contentWayPoint();
+            loaderPage();
+        }
     });
 
 

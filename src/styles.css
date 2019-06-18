@@ -264,7 +264,11 @@ footer span {
 
 @media screen and (max-width: 768px) {
     footer {
-        height: 90px;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        height: 100px;
+        line-height: 50px;
     }
 }
 
