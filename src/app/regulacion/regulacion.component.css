@@ -5,7 +5,7 @@
 img {
     float: right;
     width: 500px;
-    height: 200px;
+    height: 350px;
     max-width: 100%;
 }
 
@@ -13,7 +13,7 @@ img {
     img {
         float: right;
         width: 400px;
-        height: 200px;
+        height: 250px;
         max-width: 100%;
     }
 }
