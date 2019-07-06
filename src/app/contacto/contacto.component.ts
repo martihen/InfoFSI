@@ -18,14 +18,15 @@ export class ContactoComponent implements OnInit {
 
   contactForm(form: Form) {
     console.log("contact form");
-    this._correoService.sendMessage(form).subscribe(() => {
-      swal.fire({
-        title: 'Formulario de contacto',
-        text: 'Mensaje enviado correctamente',
-        type: 'success',
-        confirmButtonText: 'ok'
-      })
-    });
-    console.log("contact form"+form);
+    // this._correoService.sendMessage(form).subscribe(() => {
+    //   swal.fire({
+    //     title: 'Formulario de contacto',
+    //     text: 'Mensaje enviado correctamente',
+    //     type: 'success',
+    //     confirmButtonText: 'ok'
+    //   })
+    // });
+    //document.getElementById("telefono").nodeValue = "";
+    console.log("contact form "+form.getFormGroup);
   }
 }
