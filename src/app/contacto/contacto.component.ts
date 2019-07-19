@@ -9,24 +9,35 @@ import { Form } from '@angular/forms';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent implements OnInit {
-
+  public contacto: any = {};
   constructor(public _correoService: CorreoService) {
   }
 
   ngOnInit() {
+    this.contacto = {}; 
+  }
+
+  valida(){
+    this.contacto;
+    
+    return true;
   }
 
   contactForm(form: Form) {
-    console.log("contact form");
-    // this._correoService.sendMessage(form).subscribe(() => {
-    //   swal.fire({
-    //     title: 'Formulario de contacto',
-    //     text: 'Mensaje enviado correctamente',
-    //     type: 'success',
-    //     confirmButtonText: 'ok'
-    //   })
-    // });
-    //document.getElementById("telefono").nodeValue = "";
-    console.log("contact form "+form.getFormGroup);
+    //console.log(JSON.stringify(this.contacto));
+    //if (this.valida){
+      this._correoService.sendMessage(form).subscribe(() => {
+        swal.fire({
+          title: 'Formulario de contacto',
+          text: 'Mensaje enviado correctamente',
+          type: 'success',
+          confirmButtonText: 'ok'
+        })
+      });
+      this.contacto = {}; 
+    // }else{
+      
+    // }
+    
   }
 }
