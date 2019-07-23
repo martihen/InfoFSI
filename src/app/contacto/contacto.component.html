@@ -18,32 +18,37 @@
                 </address>
             </div>
 
-            <form class="form-horizontal" (ngSubmit)="contactForm(form.value)" #form="ngForm">
-
-                <legend class="text-center header">Contactenos</legend>
+            <form #userForm="ngForm" (ngSubmit)="contactForm(userForm)">
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md-1"><img src="/assets/img/baseline_person_black_18dp.png" alt="Nombre">
+                        <div class="col-md-1">
+                            <img src="/assets/img/baseline_person_black_18dp.png" alt="Nombre">
                         </div>
                         <div class="col-md-10">
-                            <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control" required [(ngModel)]="contacto.nombre" #name="ngModel">
-                            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                                <div *ngIf="name.errors?.required">
-                                    Este campo es requerido.
-                                </div>
-                                <div *ngIf="name.errors?.minlength">
-                                    Por lo menos caracteres.
+                            <input id="name" name="nombre" placeholder="Nombre" class="form-control" [ngModel]="contacto.nombre" text required #nombre="ngModel">
+                            <div class="alert" *ngIf="nombre.errors && userForm.submitted && !isValidFormSubmitted">
+                                <div *ngIf="nombre.errors.required">
+                                    {{ strName }}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md-1"><img src="/assets/img/baseline_email_black_18dp.png" alt="Email">
+                        <div class="col-md-1"><img src="/assets/img/baseline_email_black_18dp.png" alt="correo">
                         </div>
                         <div class="col-md-10">
-                            <input id="email" name="email" type="email" placeholder="Correo electrónico" class="form-control" required [(ngModel)]="contacto.email">
+                            <input id="email" name="email" placeholder="Correo electrónico" class="form-control" [ngModel]="contacto.email" required [pattern]="emailPattern" #email="ngModel">
+                            <div class="alert" *ngIf="email.errors && userForm.submitted && !isValidFormSubmitted">
+                                <div *ngIf="email.errors.required">
+                                    {{strEmail}}
+                                </div>
+                                <div *ngIf="email.errors.pattern">
+                                    {{strInvalidEmail}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -53,23 +58,36 @@
                         <div class="col-md-1"><img src="/assets/img/baseline_call_black_18dp.png" alt="Telefono">
                         </div>
                         <div class="col-md-10">
-                            <input id="telefono" name="telefono" type="number" placeholder="Telefono" class="form-control" [(ngModel)]="contacto.telefono">
+                            <input id="telefono" name="telefono" type="number" placeholder="Telefono" class="form-control" value="" [(ngModel)]="contacto.telefono" number [pattern]="telefonoPattern" #telefono="ngModel">
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
-                        <div class="col-md-1"><img src="/assets/img/baseline_comment_black_18dp.png" alt="Comentario"></div>
+                        <div class="col-md-1">
+                            <img src="/assets/img/baseline_comment_black_18dp.png" alt="Asunto">
+                        </div>
                         <div class="col-md-10">
-                            <textarea class="form-control" id="asunto" name="asunto" placeholder="Ingrese su mensaje para nosotros aquí. Nos pondremos en contacto con usted." rows="7" [(ngModel)]="contacto.asunto"></textarea>
+                            <textarea class="form-control" id="asunto" name="asunto" placeholder="Ingrese su mensaje para nosotros aquí. Nos pondremos en contacto con usted." rows="7" [(ngModel)]="contacto.asunto" text required minlength="10" maxlength="500" #asunto="ngModel"></textarea>
+                            <div class="alert" *ngIf="asunto.errors && userForm.submitted && !isValidFormSubmitted">
+                                <div *ngIf="asunto.errors.required">
+                                    {{strAsunto}}
+                                </div>
+                                <div *ngIf="asunto.errors.minlength">
+                                    {{strAsuntoMin}}
+                                </div>
+                                <div *ngIf="asunto.errors.maxlength">
+                                    {{strAsuntoMax}}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-md-12 text-center">
-                        <button type="button" type="submit" class="btn btn-primary btn-lg" data-toggle="modal">Enviar</button>
+                        <button type="button" type="submit" class="btn btn-primary btn-lg">Enviar</button>
                     </div>
                 </div>
 
@@ -82,22 +100,3 @@
         </div>
     </div>
 </div>
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Envio de correo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Aun no esta disponible esta funcionalidad
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-    </div>
-</div> -->
