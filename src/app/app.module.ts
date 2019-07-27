@@ -21,7 +21,10 @@ import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
 
 //Correo
 import { CorreoService } from './services/correo.service';
+//sitemap que no a funcionado
 import { SitemapComponent } from './sitemap/sitemap.component'
+//RECAPTCHA
+import { RecaptchaModule } from 'angular-google-recaptcha';
 
 const appRoutes: Routes = [
   { path: 'inicio', component: QuienesSomosComponent },
@@ -60,6 +63,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    RecaptchaModule.forRoot({
+      //siteKey: '6Lehx68UAAAAAEp9lkgId0SvLiIro2BBRusj6-XS',
+      siteKey: '6Lehx68UAAAAAD8FlFp4fXHnJr7uol8Il89IShrL',
+    }),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [CorreoService],
