@@ -89,7 +89,7 @@
                     <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                            <recaptcha name="myRecaptcha" [(ngModel)]="contacto.myRecaptcha" (scriptLoad)="onScriptLoad()" (scriptError)="onScriptError()" (resolved)="resolved($event)" required #myRecaptcha="ngModel"></recaptcha>
+                            <recaptcha name="myRecaptcha" [(ngModel)]="contacto.myRecaptcha" (scriptLoad)="onScriptLoad()" (scriptError)="onScriptError()" (resolved)="resolved($event)" (success)="handleSuccess($event)" required #myRecaptcha="ngModel"></recaptcha>
                             <div class="alert" *ngIf="myRecaptcha.errors && userForm.submitted && !isValidFormSubmitted">
                                 <div *ngIf="myRecaptcha.errors.required">
                                     {{strRecaptcha}}

@@ -21,16 +21,15 @@ export class ContactoComponent implements OnInit {
   validateEmail = true;
   emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
   telefonoPattern = "[0-9]+";
-  myRecaptcha: boolean;
   constructor(public _correoService: CorreoService){
-    this.myRecaptcha = false;
+
   }
 
   ngOnInit() {
   }
  
   onScriptLoad() {
-      console.log('Google reCAPTCHA loaded and is ready for use!'+this.myRecaptcha);
+      console.log('Google reCAPTCHA loaded and is ready for use!');
   }
 
   onScriptError() {
@@ -40,22 +39,26 @@ export class ContactoComponent implements OnInit {
   resolved(captchaResponse: string) {
     console.log('Resolved captcha with response: '+ captchaResponse);
   }
+  handleSuccess(captchaResponse: string) {
+    console.log('handleSuccess captcha with response: '+ captchaResponse);
+  }
 
   contactForm(form: NgForm) {
     this.isValidFormSubmitted = false;
     if (form.invalid) {
       return;
     }
-    console.log(this.myRecaptcha);
     this._correoService.sendMessage(form.value).subscribe(() => {
-      swal.fire({
+      /*swal.fire({
         title: 'Formulario de contacto',
         text: 'Mensaje enviado correctamente',
         type: 'success',
         confirmButtonText: 'ok'
-      })
+      })*/
+      location.reload();
     }); 
     this.isValidFormSubmitted = true;
-    form.resetForm();
+    //form.resetForm();
+    
   }
 }
