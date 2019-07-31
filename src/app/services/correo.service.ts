@@ -5,8 +5,8 @@ export class CorreoService {
 constructor(private _http: HttpClient) { }
 sendMessage(body: any) {
     try {
-        return this._http.post("http://localhost:3100/formulario/", body);
-        //return this._http.post("https://api.poolenergy.com.gt/formulario/", body);
+        //return this._http.post("http://localhost:3100/formulario/", body);
+        return this._http.post("https://api.poolenergy.com.gt/formulario/", body);
     } catch (error) {
         return error;
     }
