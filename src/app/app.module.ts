@@ -18,6 +18,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { BarComponent } from './bar/bar.component';
 import { Routes, RouterModule } from '@angular/router';
 import { PiePaginaComponent } from './pie-pagina/pie-pagina.component';
+import { MonitorComponent } from './monitor/monitor.component';
 
 //Correo
 import { CorreoService } from './services/correo.service';
@@ -25,6 +26,7 @@ import { CorreoService } from './services/correo.service';
 import { SitemapComponent } from './sitemap/sitemap.component'
 //RECAPTCHA
 import { RecaptchaModule } from 'angular-google-recaptcha';
+
 
 const appRoutes: Routes = [
   { path: 'inicio', component: QuienesSomosComponent },
@@ -36,6 +38,7 @@ const appRoutes: Routes = [
   { path: 'estudios', component: EstudiosComponent },
   { path: 'nuestra-opinion', component: NuestraOpinionComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'monitor', component: MonitorComponent },
   { path: 'sitemap', component: SitemapComponent },
   { path: '', redirectTo:'inicio', pathMatch: 'full' },
   { path: '**', redirectTo:'inicio', pathMatch: 'full' }
@@ -56,7 +59,8 @@ const appRoutes: Routes = [
     NuestraOpinionComponent,
     BarComponent,
     PiePaginaComponent,
-    SitemapComponent
+    SitemapComponent,
+    MonitorComponent
   ],
   imports: [
     BrowserModule,
