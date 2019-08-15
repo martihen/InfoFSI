@@ -27,17 +27,6 @@ div .display-t1 iframe {
         padding-top: 30px;
         height: 0px;
     }
-    div .display-t1 iframe {
-        max-width: auto;
-        max-height: auto;
-    }
-}
-
-@media screen and (max-width: 410px) {
-    div .display-t1 iframe {
-        max-width: 410px;
-        max-height: auto;
-    }
 }
 
 

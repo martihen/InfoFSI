@@ -106,11 +106,7 @@
 
     // Loading page
     var loaderPage = function() {
-        // console.log("loading..." + Date());
-        //setTimeout(function() {
         $(".loader").fadeOut("slow");
-        // console.log("Fin loading..." + Date());
-        //}, 500);
     };
 
     //VIDEO

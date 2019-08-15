@@ -285,3 +285,10 @@ footer span {
     top: 821px;
     height: 187px;
 } */
+
+@media only screen and (orientation:portrait) {
+    /* portrait styles here */
+    #wrap {
+        width: 768px;
+    }
+}
